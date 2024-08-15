@@ -27,7 +27,7 @@
 }
 
 .btn:hover {
-  background-color: var(--primary-color-dark);
+  background-color: maroon;
 }
 
 body {
@@ -54,6 +54,11 @@ nav {
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--primary-color);
+  cursor: pointer;
+}
+
+.nav__logo:hover{
+    color: maroon;
 }
 
 .nav__links {
@@ -218,50 +223,51 @@ nav {
 }
 
 .certifications {
-    padding: 2rem 1rem;
-    background-color: #f1f5f9; /* Light greyish-blue */
-  }
-  
+  padding: 2rem 1rem;
+  background-color: #f1f5f9; /* Light greyish-blue */
+}
+
+.certifications__container {
+  display: flex;
+  flex-direction: row; /* Change to row for horizontal layout */
+  gap: 2rem; /* Space between certifications */
+  justify-content: center; /* Center the certifications */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.certification {
+  width: 100%;
+  max-width: 200px; /* Set a maximum width for each certification */
+  padding: 1rem;
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.certification img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.section__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+@media (width < 900px) {
   .certifications__container {
-    display: flex;
-    flex-direction: row; /* Change to row for horizontal layout */
-    gap: 2rem; /* Space between certifications */
-    justify-content: center; /* Center the certifications */
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-  }
-  
-  .certification {
     width: 100%;
-    max-width: 200px; /* Set a maximum width for each certification */
     padding: 1rem;
-    background-color: var(--white);
-    border-radius: 5px;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
   }
-  
-  .certification img {
-    width: 100%;
-    border-radius: 5px;
+
+  .certification {
+    max-width: 150px; /* Adjust max width for smaller screens */
   }
-  
-  .section__title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--text-dark);
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  @media (width < 900px) {
-    .certifications__container {
-      width: 100%;
-      padding: 1rem;
-    }
-  
-    .certification {
-      max-width: 150px; /* Adjust max width for smaller screens */
-    }
-  }  
+}
+
 
 .services {
     padding: 2rem 1rem;
@@ -287,13 +293,27 @@ nav {
     background-color: #f9f9f9;
     border-radius: 5px;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
   }
+
   
   .service h3 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--primary-color);
+    color: black;
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between; /* Align title and logo to the sides */
+    align-items: center; /* Center the items vertically */
+  }
+
+  .logo {
+    font-weight: bold; /* Style the logo to stand out */
+    color: var(--primary-color); /* Use the primary color for the logo */
+    margin-left: 1rem; /* Add space between the title and logo */
+    color: maroon;
+    font-size: 16px;
   }
   
   .service p {
